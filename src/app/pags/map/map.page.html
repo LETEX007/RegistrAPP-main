@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Mapa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <capacitor-google-maps #map></capacitor-google-maps>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="mygeo()">
+      <ion-icon name="locate-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

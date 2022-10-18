@@ -1,0 +1,19 @@
+<div class="ion-padding">
+  
+  <ion-accordion-group *ngFor="let historial of history | filter:buscador">
+    <ion-accordion value="uno">
+      <ion-item slot="header" color="light">
+        <ion-label>{{historial.fecha}}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-label>{{historial.curso}}</ion-label>
+        <ion-row class="ion-text-center">
+          <ion-col>
+            <ion-label>{{historial.presente}}</ion-label>
+          </ion-col> 
+        </ion-row>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</div>
+

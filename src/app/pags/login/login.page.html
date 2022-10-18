@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-text-center">
+ 
+  <ion-toolbar color="#007bff">
+    <img src="assets/img/2.png">
+  </ion-toolbar>
+
+  
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Bienvenido!</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item lines="full">
+              <ion-label position="floating">Usuario</ion-label>
+              <ion-input type="text" [(ngModel)]="user.usuario" minlength="3" maxlength="12"></ion-input>
+            </ion-item>
+            <ion-item lines="full">
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input type="password" [(ngModel)]="user.clave" minlength="4" maxlength="12" ></ion-input>
+            </ion-item>
+            <div class="ion-padding">
+              <ion-button expand="full" color="warning" (click)="getUserGit()">Ingresar</ion-button>
+            </div>
+              
+            
+            
+            <!-- <u position="floating" color="secondary" (click)="recupera()">¿Olvidaste tu contraseña?</u> -->
+          </ion-card-content>
+        </ion-card>
+        
+</ion-content>

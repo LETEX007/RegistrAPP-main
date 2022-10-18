@@ -1,0 +1,5 @@
+npm i ng2-search-filter --save
+npm install @capacitor-community/barcode-scanner
+//to compile in android studio
+ionic build --prod && npx cap copy && npx cap sync && npx cap open android
+// and clean project before anything

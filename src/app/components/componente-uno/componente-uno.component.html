@@ -1,0 +1,14 @@
+<div class="ion-padding">
+    <ion-list *ngFor="let curso of cursos | filter:buscador">
+      <ion-item>
+        <ion-label>
+          {{curso.nombre}}
+        </ion-label>
+        <ion-label>
+          {{curso.seccion}}
+        </ion-label>
+        <ion-button color="primary" [routerLink]="['/asistencia',curso.id]"><ion-text color="light" >Ingresar</ion-text></ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+

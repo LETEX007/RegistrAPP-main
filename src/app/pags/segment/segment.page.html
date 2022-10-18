@@ -1,0 +1,46 @@
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Herramientas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-button [routerLink]="['/map']">Ubicacion Sede</ion-button>
+    <ion-button (click)="closeSesion()">Cerrar sesion</ion-button>
+  </ion-content>
+</ion-menu>
+<div id="main-content">
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>Asistencia</ion-title>
+  </ion-toolbar>
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="uno">
+      <ion-label>Asignaturas</ion-label>
+    </ion-segment-button>
+    <!-- <ion-segment-button value="tres">
+      <ion-label>Camara</ion-label>
+    </ion-segment-button> -->
+    <ion-segment-button value="dos">
+      <ion-label id="historial">Historial</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+</div>
+<ion-content>
+  
+
+  <ion-router-outlet></ion-router-outlet>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" #anim1>
+    <ion-fab-button (click)="onScan()" #anim2 >
+      <ion-icon name="qr-code-outline" ></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
+
