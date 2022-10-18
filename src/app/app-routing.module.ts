@@ -18,11 +18,6 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'map',
-    loadChildren: () => import('./pags/map/map.module').then( m => m.MapPageModule),
-    canActivate: [AuthGuard]
-  },
-  {
     path: '**',
     loadChildren: () => import('./pags/notfound/notfound.module').then( m => m.NotfoundPageModule)
   },
